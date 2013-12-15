@@ -1,41 +1,45 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="crossfit.jpg" alt="crossfit" class = "img-responsive">
-      <div class="carousel-caption">
-        Find a crossfit buddy.
+<div class="span6">
+  <div id="homepage-carousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#homepage-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#homepage-carousel" data-slide-to="1"></li>
+      <li data-target="#homepage-carousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      
+      <div class="item active middle">
+        <%= image_tag("crossfit.jpg", :alt => "crossfit", :class => "img-responsive")  %>
+        <div class="carousel-caption">
+          Find a crossfit buddy.
+        </div>
       </div>
+
+      <div class="item">
+        <%= image_tag("running.jpg", :alt => "running", :class => "img-responsive") %>
+        <div class="carousel-caption">
+          Find a running buddy.
+        </div>
+      </div>
+
+      <div class="item">
+        <%= image_tag("climbing.jpg", :alt => "running", :class => "img-responsive") %>
+        <div class="carousel-caption">
+          Find a climbing buddy.
+        </div>
+      </div>
+
     </div>
 
-    <div class="item">
-      <img src="running.jpg" alt="running" class = "img-responsive">
-      <div class="carousel-caption">
-        Find a running buddy.
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="climbing.jpg" alt="climbing" class = "img-responsive">
-      <div class="carousel-caption">
-        Find a climbing buddy.
-      </div>
-    </div>
-
+    <!-- Controls -->
+    <a class="left carousel-control" href="#homepage-carousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#homepage-carousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
   </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
 </div>
