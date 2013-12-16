@@ -1,6 +1,7 @@
 Fitnessfriendfinder::Application.routes.draw do
 
-  root 'welcome#index'
+  devise_for :users
+  root :to => 'welcome#index'
 
   resources :welcome
 end

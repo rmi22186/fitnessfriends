@@ -17,6 +17,7 @@ end
 
 
 gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'devise'
 
 
 gem 'sass-rails', '~> 4.0.0'
