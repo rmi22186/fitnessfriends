@@ -19,6 +19,7 @@ end
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'figaro'
 

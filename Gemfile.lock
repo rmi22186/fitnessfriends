@@ -163,6 +163,7 @@ DEPENDENCIES
   figaro
   jbuilder (~> 1.2)
   jquery-rails
+  omniauth
   omniauth-facebook
   omniauth-twitter
   pg
