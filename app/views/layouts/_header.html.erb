@@ -30,7 +30,7 @@
             </ul>
           </li>
           <% else %>
-            <li>Sign In with <%= link_to image_tag("fb.png"), "http://www.facebook.com" %> or <%= link_to image_tag("twitter.png"), "http://www.twitter.com" %>
+            <li>Sign In with <%= link_to image_tag("fb.png"), user_omniauth_authorize_path(:facebook) %> or <%= link_to image_tag("twitter.png"), user_omniauth_authorize_path(:twitter) %>
               or <%= link_to "Your Email!", new_user_session_path %></li>
             <li><%= link_to "Sign Up!", new_user_registration_path %></li>
         <% end %>
