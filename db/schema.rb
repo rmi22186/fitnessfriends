@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131216183439) do
+ActiveRecord::Schema.define(version: 20131219165248) do
+
+  create_table "accounts", force: true do |t|
+    t.integer  "user_id"
+    t.string   "uid"
+    t.string   "username"
+    t.string   "oauth_token"
+    t.string   "oauth_secret"
+    t.datetime "oauth_expires"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "accounts", ["user_id"], name: "index_accounts_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "first_name"
@@ -34,6 +47,9 @@ ActiveRecord::Schema.define(version: 20131216183439) do
     t.datetime "updated_at"
     t.string   "provider"
     t.string   "uid"
+    t.text     "description"
+    t.string   "fun_fact"
+    t.string   "fitness_goal"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

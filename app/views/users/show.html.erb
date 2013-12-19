@@ -1,0 +1,15 @@
+
+  <div>
+    <h2><%= @user.first_name %> <%= @user.last_name %>'s Profile</h2>
+    <h3>About Me</h3>
+    <%= @user.description %>
+    <h3><small>Fun Fact</small></h3>
+    <%= @user.fun_fact %>
+    <h3><small>Top Fitness Goal</small></h3>
+    <%= @user.fitness_goal %>
+    <p>
+      
+      <%= link_to "Message Me!", "#", class: 'btn btn-primary btn-large' %>
+    </p>
+  </div>
+  
