@@ -1,8 +1,8 @@
 
   <div>
     <h2><%= @user.first_name %> <%= @user.last_name %>'s Profile</h2>
-    <%= image_tag(@user.avatar.tiny.url) if @user.avatar? %> 
-    <small>Member since <%= @user.created_at %></small>
+    <%= image_tag(@user.avatar.url) if @user.avatar? %>
+    <p><small>Member since <%= @user.created_at %></small></p>
     <h3>About Me</h3>
     <%= @user.description %>
     <h3><small>Fun Fact</small></h3>
