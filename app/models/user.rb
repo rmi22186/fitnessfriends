@@ -22,8 +22,9 @@ class User < ActiveRecord::Base
                         )
       user.skip_confirmation!
       user.save
+    else
+      user.update_attribute(:facebook_photo, "http://graph.facebook.com/#{auth.info.nickname}/picture?type=large")
     end
     user
   end
-
 end

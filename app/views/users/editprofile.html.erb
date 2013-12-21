@@ -1,0 +1,22 @@
+<%= form_for @user, url: update_profile_path, :method => :put do |f| %>
+
+  <%= (image_tag(@user.facebook_photo) || current_user.avatar ) if current_user.avatar? || @user.facebook_photo? %>
+      <div><%= f.label :avatar %> <br />
+      <%= f.file_field :avatar %></div>  
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <div><%= f.label :description %><br />
+      <%= f.text_area :description %></div>
+
+      <div><%= f.label :fun_fact %><br />
+      <%= f.text_area :fun_fact %></div>
+
+      <div><%= f.label :fitness_goal %><br />
+      <%= f.text_area :fitness_goal %></div>
+
+      <div><%= f.submit "Update" %></div>
+    </div>
+  </div>
+<% end %>

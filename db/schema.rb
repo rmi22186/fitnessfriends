@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131219200706) do
+ActiveRecord::Schema.define(version: 20131220195551) do
 
   create_table "accounts", force: true do |t|
     t.integer  "user_id"
@@ -51,6 +51,9 @@ ActiveRecord::Schema.define(version: 20131219200706) do
     t.string   "fun_fact"
     t.string   "fitness_goal"
     t.string   "avatar"
+    t.string   "facebook_photo"
+    t.string   "city"
+    t.string   "state"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
