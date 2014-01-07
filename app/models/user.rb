@@ -1,10 +1,13 @@
 class User < ActiveRecord::Base
+
+  attr_accessor :current_password
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable, :omniauth_providers => [:facebook]
 
-   mount_uploader :avatar, AvatarUploader
+  mount_uploader :avatar, AvatarUploader
 
   validates :description, length: { maximum: 144 }
 
@@ -27,4 +30,15 @@ class User < ActiveRecord::Base
     end
     user
   end
+
+  LEVELS = ['rookie', 'seasoned', 'veteran']
+  SPORTS = ['rock climber', 'runner', 'basketball player']
+
+
+  geocoded_by :zipcode
+  after_validation :geocode, :if => :zipcode_changed?
+
+  #field :coordinates, :type => Array
+  #field :zipcode
+
 end

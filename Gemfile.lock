@@ -67,6 +67,7 @@ GEM
       nokogiri (~> 1.5)
       ruby-hmac
     formatador (0.2.4)
+    geocoder (1.1.9)
     hashie (2.0.5)
     hike (1.2.3)
     httpauth (0.2.0)
@@ -182,6 +183,7 @@ DEPENDENCIES
   devise
   figaro
   fog
+  geocoder
   jbuilder (~> 1.2)
   jquery-rails
   mini_magick

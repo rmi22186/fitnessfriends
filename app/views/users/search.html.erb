@@ -1,0 +1,13 @@
+I am a
+
+<%= form_for @user, url: update_profile_path, :method => :put do |f| %>
+
+<%= f.select :experience, User::LEVELS %>
+<%= f.select :sport, User::SPORTS %>
+
+looking for someone to be active with around 
+
+<%= f.label :zipcode %>
+<%= f.text_field :zipcode, placeholder: "zip code" %>
+<%= f.submit 'Submit' %>
+<% end %>
