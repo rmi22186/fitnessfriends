@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   has_many :sports, through: :user_sports
 
   attr_accessor :current_password
+  
+  accepts_nested_attributes_for :user_sports
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

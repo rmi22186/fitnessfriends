@@ -10,7 +10,7 @@ class ProfilesController < ApplicationController
 
   def update
     @user = current_user
-    if @user.update_attributes(params[:user].permit(:fun_fact, :description, :fitness_goal, :zipcode, :avatar, :experience, :sport))
+    if @user.update_attributes(params[:user].permit(:fun_fact, :description, :fitness_goal, :zipcode, :avatar, user_sports: [:id, :experience, :sport_id]))
       redirect_to profile_path(current_user), :notice => "Succesfully Updated"
     end
   end
