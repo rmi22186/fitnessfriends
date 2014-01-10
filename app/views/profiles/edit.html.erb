@@ -19,6 +19,10 @@
       <div><%= f.label :zipcode %><br />
       <%= f.text_area :zipcode %></div>
 
+
+      <%= f.select :experience, User::LEVELS %>
+      <%= f.select :sport, User::SPORTS %>
+
       <div><%= f.submit "Update" %></div>
     </div>
   </div>

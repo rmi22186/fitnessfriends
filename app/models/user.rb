@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
 
+  has_many :user_sports
+  has_many :sports, through: :user_sports
+
   attr_accessor :current_password
 
   # Include default devise modules. Others available are:
@@ -37,8 +40,8 @@ class User < ActiveRecord::Base
   geocoded_by :zipcode
   after_validation :geocode, :if => :zipcode_changed?
 
-  scope :sports_search, -> {|sport| where("sport = ?", sport)}
-  scope :experience_search, 
+  #scope :sports_search, -> {|sport| where("sport = ?", sport)}
+  #scope :experience_search, 
 
 
 end

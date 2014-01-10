@@ -11,20 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140107194709) do
+ActiveRecord::Schema.define(version: 20140110094640) do
 
-  create_table "accounts", force: true do |t|
-    t.integer  "user_id"
-    t.string   "uid"
-    t.string   "username"
-    t.string   "oauth_token"
-    t.string   "oauth_secret"
-    t.datetime "oauth_expires"
+  create_table "sports", force: true do |t|
+    t.string   "sport"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
-  add_index "accounts", ["user_id"], name: "index_accounts_on_user_id"
+  create_table "user_sports", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "sports_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "experience"
+  end
 
   create_table "users", force: true do |t|
     t.string   "first_name"
@@ -55,8 +57,6 @@ ActiveRecord::Schema.define(version: 20140107194709) do
     t.string   "city"
     t.string   "state"
     t.integer  "zipcode"
-    t.string   "experience"
-    t.string   "sport"
     t.float    "latitude"
     t.float    "longitude"
   end

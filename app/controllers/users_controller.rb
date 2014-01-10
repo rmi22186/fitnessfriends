@@ -4,10 +4,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def editprofile
-    @user = User.find(current_user)
-  end
-
   def search_page
     @user = User.find(current_user)
   end
@@ -21,13 +17,6 @@ class UsersController < ApplicationController
 
   def results_page
     @user = User.all.sports_search.experience_search
-  end
-
-  def updateprofile
-    @user = current_user
-    if @user.update_attributes(params[:user].permit(:fun_fact, :description, :fitness_goal, :zipcode, :avatar, :experience, :sport))
-      redirect_to user_path(current_user), :notice => "Succesfully Updated"
-    end
   end
 
   def update_password
