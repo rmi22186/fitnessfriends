@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140110094640) do
+ActiveRecord::Schema.define(version: 20140110100214) do
 
   create_table "sports", force: true do |t|
     t.string   "sport"
