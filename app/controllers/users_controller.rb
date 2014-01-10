@@ -8,8 +8,19 @@ class UsersController < ApplicationController
     @user = User.find(current_user)
   end
 
-  def search
+  def search_page
     @user = User.find(current_user)
+  end
+
+  def search_users
+    @user = current_user
+
+    @user.update_attributes(params[:user].permit(:zipcode, :sport, :experience))
+    redirect_to results_page_path
+  end
+
+  def results_page
+    @user = User.all.sports_search.experience_search
   end
 
   def updateprofile

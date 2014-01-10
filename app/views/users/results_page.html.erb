@@ -1,0 +1,5 @@
+People near me
+
+  <% @user.nearbys(30).each do |user| %>
+    <li><%= user.first_name %></li>
+  <% end %>

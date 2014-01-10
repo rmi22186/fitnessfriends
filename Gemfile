@@ -24,6 +24,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 gem 'geocoder'
+gem 'gmaps4rails'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'

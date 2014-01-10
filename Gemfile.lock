@@ -68,6 +68,7 @@ GEM
       ruby-hmac
     formatador (0.2.4)
     geocoder (1.1.9)
+    gmaps4rails (2.1.1)
     hashie (2.0.5)
     hike (1.2.3)
     httpauth (0.2.0)
@@ -184,6 +185,7 @@ DEPENDENCIES
   figaro
   fog
   geocoder
+  gmaps4rails
   jbuilder (~> 1.2)
   jquery-rails
   mini_magick

@@ -34,11 +34,11 @@ class User < ActiveRecord::Base
   LEVELS = ['rookie', 'seasoned', 'veteran']
   SPORTS = ['rock climber', 'runner', 'basketball player']
 
-
   geocoded_by :zipcode
   after_validation :geocode, :if => :zipcode_changed?
 
-  #field :coordinates, :type => Array
-  #field :zipcode
+  scope :sports_search, -> {|sport| where("sport = ?", sport)}
+  scope :experience_search, 
+
 
 end
